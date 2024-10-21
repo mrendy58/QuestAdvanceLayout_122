@@ -9,6 +9,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -25,11 +26,13 @@ fun BelajarLayout(
         modifier = modifier.fillMaxSize()
     ) {
         HeaderSection()
-        DetailMhs(
-            param = "Nama",
-            argu = "Muhamad Rendy"
-        )
+        DetailMhs(param = "Nama", argu = "Muhamad Rendy")
         DetailMhs(param = "Nim", argu = "20220140122")
+        DetailMhs(param = "Prodi", argu = "Teknologi Informasi")
+        DetailMhs(param = "Fakultas", argu = "Fakultas Teknik")
+        DetailMhs(param = "Universitas", argu = "Universitas Muhammadiyah Yogyakarta")
+        DetailMhs(param = "Alamat", argu = "Jl. Brawijaya, Bantul, Yogyakarta")
+        DetailMhs(param = "Email", argu = "rendy@gmail.com")
     }
 }
 
@@ -45,7 +48,9 @@ fun HeaderSection() {
                 .fillMaxWidth()
                 .padding(16.dp)
         ) {
-            Box {
+            Box(
+                modifier = Modifier.size(64.dp)
+            ) {
                 Image(
                     painter = painterResource(id = R.drawable.iphone14),
                     contentDescription = null,
@@ -57,8 +62,8 @@ fun HeaderSection() {
                     Icons.Filled.Check,
                     contentDescription = null,
                     modifier = Modifier
-                        .size(30.dp)
-                        .padding(4.dp)
+                        .size(24.dp)
+                        .align(Alignment.BottomEnd)
                 )
             }
             Column(
