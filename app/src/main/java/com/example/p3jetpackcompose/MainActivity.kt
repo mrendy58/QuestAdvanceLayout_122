@@ -20,9 +20,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             P3JETPACKCOMPOSETheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    BelajarLayout(
                         modifier = Modifier.padding(innerPadding)
+                        
                     )
                 }
             }
